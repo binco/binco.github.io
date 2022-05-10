@@ -39,11 +39,11 @@
 <meta property="og:title" content="vim-note-01">
 <meta property="og:url" content="http://example.com/2022/05/09/vim-note-01/index.html">
 <meta property="og:site_name" content="阿珂">
-<meta property="og:description" content="第1章 起步###参数 12vim --version  #查看vim版本vim +%s&#x2F;abc&#x2F;def&#x2F;g number.txt #打开number.txt,并立即把abc替换成def    ###打开多个窗口 使用字母o和O选项打开后分别显示水平和垂直分割的窗口 12vim -o2 txt1 txt2 #水平分割vim -O3 txt1 txt2 txt3 #垂直分割    挂起同执行shel">
+<meta property="og:description" content="第1章 起步参数123vim --version  #查看vim版本vim +%s&#x2F;abc&#x2F;def&#x2F;g number.txt #打开number.txt,并立即把abc替换成defvim -c %s&#x2F;abc&#x2F;def&#x2F;gnumber.txt #同上    同时打开多个窗口使用字母o和O选项打开后分别显示水平和垂直分割的窗口 12vim -o2 txt1 txt2 #水平分割vim -O3 txt1">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-05-09T02:02:50.000Z">
-<meta property="article:modified_time" content="2022-05-09T14:08:12.067Z">
+<meta property="article:modified_time" content="2022-05-10T08:52:27.324Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="vim">
 <meta name="twitter:card" content="summary">
@@ -1913,7 +1913,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.3690b000.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.1d2dd3e0.js","rightMenus":"/js/plugins/rightMenus.3669cc79.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.06d40311.js"},"css":{"style":"/css/style.a03aff9c.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1652114222406),
+    lastupdate: new Date(1652195033718),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2739,20 +2739,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <div class="story post-story"><h2 id="第1章-起步"><a href="#第1章-起步" class="headerlink" title="第1章 起步"></a>第1章 起步</h2><p>###参数</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim --version  <span class="comment">#查看vim版本</span></span><br><span class="line">vim +%s/abc/def/g number.txt <span class="comment">#打开number.txt,并立即把abc替换成def</span></span><br></pre></td></tr></table></figure>
+    <div class="story post-story"><h2 id="第1章-起步"><a href="#第1章-起步" class="headerlink" title="第1章 起步"></a>第1章 起步</h2><h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim --version  <span class="comment">#查看vim版本</span></span><br><span class="line">vim +%s/abc/def/g number.txt <span class="comment">#打开number.txt,并立即把abc替换成def</span></span><br><span class="line">vim -c %s/abc/def/gnumber.txt <span class="comment">#同上</span></span><br></pre></td></tr></table></figure>
 
 
 
-<p>###打开多个窗口</p>
-<p>使用字母o和O选项打开后分别显示水平和垂直分割的窗口</p>
+<h3 id="同时打开多个窗口"><a href="#同时打开多个窗口" class="headerlink" title="同时打开多个窗口"></a>同时打开多个窗口</h3><p>使用字母o和O选项打开后分别显示水平和垂直分割的窗口</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim -o2 txt1 txt2 <span class="comment">#水平分割</span></span><br><span class="line">vim -O3 txt1 txt2 txt3 <span class="comment">#垂直分割</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="挂起"><a href="#挂起" class="headerlink" title="挂起"></a>挂起</h3><p>同执行shell命令一样，按组合键<code>Ctrl-z</code>挂起，也可以用<code>:stop</code>或<code>:suspend</code>查看哪些挂起任务，则用<code>jobs</code>命令</p>
-<p><code>fg</code>命令从挂起状态返回，默认放回+状态的挂起任务，可以用<code>fg %3</code>来回到任务3</p>
-<h3 id="聪明启动vim"><a href="#聪明启动vim" class="headerlink" title="聪明启动vim"></a>聪明启动vim</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> -l | vim -  <span class="comment">#通过管道，把内容输出到新建的vim文件中。 后面必须加一个减号。</span></span><br></pre></td></tr></table></figure>
+<h3 id="挂起"><a href="#挂起" class="headerlink" title="挂起"></a>挂起</h3><p>同执行shell命令一样，按组合键<code>Ctrl-z</code>挂起，也可以用<code>:stop</code>或<code>:suspend</code><br>查看哪些挂起任务,则用<code>jobs</code>命令查看后台任务列表<br><code>fg</code>命令从后台挂起状态返回前台，默认返回+状态的挂起任务，可以用<code>fg %3</code>来指定回到任务3</p>
+<h3 id="聪明启动vim"><a href="#聪明启动vim" class="headerlink" title="聪明启动vim"></a>聪明启动vim</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> -l | vim -  <span class="comment">#通过管道，把内容输出到新建的vim文件中。 后面必须加一个减号。再用:w name 保存文件名。</span></span><br></pre></td></tr></table></figure>
 
 
 
@@ -2779,10 +2776,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-09T22:08:12+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-10T16:52:27+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年5月9日</p>
+    <p>更新于：2022年5月10日</p>
   </a>
 </div>
 
@@ -2850,6 +2847,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
+        <a class='prev' href='/2022/05/10/vim-note-02/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>vim-note-02</p>
+          <p class='content'>第2章 缓冲区（Buffers），窗口（Windows）和选项卡（Tabs）Buffers
+buffer是一个内存中的一个空间，每当vim打开一个文件，该文件的数据就与一个buffer绑定，即，...</p>
+        </a>
+      
       
         <a class='next' href='/2022/05/07/everyday-in-may/'>
           <p class='title'>Everyday in MAY<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
@@ -2910,7 +2913,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC1%E7%AB%A0-%E8%B5%B7%E6%AD%A5"><span class="toc-text">第1章 起步</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%82%E8%B5%B7"><span class="toc-text">挂起</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%81%AA%E6%98%8E%E5%90%AF%E5%8A%A8vim"><span class="toc-text">聪明启动vim</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC1%E7%AB%A0-%E8%B5%B7%E6%AD%A5"><span class="toc-text">第1章 起步</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E6%95%B0"><span class="toc-text">参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8C%E6%97%B6%E6%89%93%E5%BC%80%E5%A4%9A%E4%B8%AA%E7%AA%97%E5%8F%A3"><span class="toc-text">同时打开多个窗口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%82%E8%B5%B7"><span class="toc-text">挂起</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%81%AA%E6%98%8E%E5%90%AF%E5%8A%A8vim"><span class="toc-text">聪明启动vim</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -4043,7 +4046,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"阿珂","url":"http://example.com/","logo":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/imags/diary168.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"阿珂"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/05/09/vim-note-01/","name":"vim-note-01"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"vim-note-01","description":"","datePublished":"2022-05-09T02:02:50.000Z","dateModified":"2022-05-09T14:08:12.067Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/05/09/vim-note-01/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/imags/diary168.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"阿珂","logo":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}},"url":"http://example.com/2022/05/09/vim-note-01/","wordCount":0,"keywords":"vim","image":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"阿珂","url":"http://example.com/","logo":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/imags/diary168.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"阿珂"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/05/09/vim-note-01/","name":"vim-note-01"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"vim-note-01","description":"","datePublished":"2022-05-09T02:02:50.000Z","dateModified":"2022-05-10T08:52:27.324Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/05/09/vim-note-01/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/imags/diary168.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"阿珂","logo":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}},"url":"http://example.com/2022/05/09/vim-note-01/","wordCount":0,"keywords":"vim","image":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}}]</script>
 
 
 
