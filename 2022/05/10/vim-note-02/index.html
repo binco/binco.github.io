@@ -39,11 +39,11 @@
 <meta property="og:title" content="Vim-note-02">
 <meta property="og:url" content="http://example.com/2022/05/10/vim-note-02/index.html">
 <meta property="og:site_name" content="阿珂">
-<meta property="og:description" content="第2章 缓冲区（Buffers），窗口（Windows）和选项卡（Tabs）Buffers buffer是一个内存中的一个空间，每当vim打开一个文件，该文件的数据就与一个buffer绑定，即，当您在vim中打开3个文件，就有3个buffers 在~&#x2F;.vimrc中添加set hidden 保存，然后激活它(在vimrc文件中运行:source %)，可以在当前buffer未保存时切换到另一个bu">
+<meta property="og:description" content="第 2 章 缓冲区（Buffers），窗口（Windows）和选项卡（Tabs）Buffers buffer 是一个内存中的一个空间，每当 vim 打开一个文件，该文件的数据就与一个 buffer 绑定，即，当您在 vim 中打开3个文件，就有3个 buffers 在~&#x2F;.vimrc中添加set hidden 保存，然后激活它(在 vimrc 文件中运行  :source % )，可以在当前 bu">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-05-10T06:17:08.000Z">
-<meta property="article:modified_time" content="2022-05-12T07:01:55.081Z">
+<meta property="article:modified_time" content="2022-05-15T16:25:29.831Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="vim">
 <meta name="twitter:card" content="summary">
@@ -1913,7 +1913,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.3690b000.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.1d2dd3e0.js","rightMenus":"/js/plugins/rightMenus.3669cc79.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.06d40311.js"},"css":{"style":"/css/style.a03aff9c.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1652631307096),
+    lastupdate: new Date(1652632029175),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2739,26 +2739,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <div class="story post-story"><h2 id="第2章-缓冲区（Buffers），窗口（Windows）和选项卡（Tabs）"><a href="#第2章-缓冲区（Buffers），窗口（Windows）和选项卡（Tabs）" class="headerlink" title="第2章 缓冲区（Buffers），窗口（Windows）和选项卡（Tabs）"></a>第2章 缓冲区（Buffers），窗口（Windows）和选项卡（Tabs）</h2><h3 id="Buffers"><a href="#Buffers" class="headerlink" title="Buffers"></a>Buffers</h3><ol>
-<li>buffer是一个内存中的一个空间，每当vim打开一个文件，该文件的数据就与一个buffer绑定，即，当您在vim中打开3个文件，就有3个buffers</li>
-<li>在<code>~/.vimrc</code>中添加<code>set hidden</code> 保存，然后激活它(在vimrc文件中运行<code>:source %</code>)，可以在当前buffer未保存时切换到另一个buffer，否则会提示保存错误<code>E37: No write since last change (add ! to override)</code></li>
-<li>切换buffer有几种方法：<ul>
-<li><code>:bnext</code> 切换至下一个buffer（<code>:bprevious</code>切换至前一个buffer），可用缩写<code>:bn</code></li>
-<li><code>:buffer</code> + 文件名。（按下<code>&lt;Tab&gt;</code>键Vim会自动补全文件名）。</li>
-<li><code>:buffer</code> + <code>n</code>, n是buffer的编号。比如，输入<code>:buffer 2</code>将使您切换到buffer #2。</li>
-<li>按下<code>Ctrl-O</code>将跳转至跳转列表中旧的位置，对应的，按下<code>Ctrl-I</code>将跳转至跳转列表中新的位置。这并不是属于buffer的特有方法，但它可以用来在不同的buffers中跳转。我将在第5章详细讲述关于跳转的知识。</li>
-<li>按下<code>Ctrl-^</code>跳转至先前编辑过的buffer。</li>
+    <div class="story post-story"><h2 id="第-2-章-缓冲区（Buffers），窗口（Windows）和选项卡（Tabs）"><a href="#第-2-章-缓冲区（Buffers），窗口（Windows）和选项卡（Tabs）" class="headerlink" title="第 2 章 缓冲区（Buffers），窗口（Windows）和选项卡（Tabs）"></a>第 2 章 缓冲区（Buffers），窗口（Windows）和选项卡（Tabs）</h2><h3 id="Buffers"><a href="#Buffers" class="headerlink" title="Buffers"></a>Buffers</h3><ol>
+<li>buffer 是一个内存中的一个空间，每当 vim 打开一个文件，该文件的数据就与一个 buffer 绑定，即，当您在 vim 中打开3个文件，就有3个 buffers</li>
+<li>在<code>~/.vimrc</code>中添加<code>set hidden</code> 保存，然后激活它(在 vimrc 文件中运行  <code>:source %</code> )，可以在当前 buffer 未保存时切换到另一个 buffer，否则会提示保存错误 <code>E37: No write since last change (add ! to override)</code></li>
+<li>切换 buffer 有几种方法：<ul>
+<li><code>:bnext</code>  切换至下一个 buffer（<code>:bprevious</code> 切换至前一个  buffer），可用缩写 <code>:bn</code></li>
+<li><code>:buffer</code>  + 文件名。（按下 <code>&lt;Tab&gt;</code> 键 Vim 会自动补全文件名）。</li>
+<li><code>:buffer</code>  + <code>n</code>, n 是  buffer 的编号。比如，输入<code>:buffer 2</code>将使您切换到 buffer #2。</li>
+<li>按下 <code>Ctrl-O</code> 将跳转至跳转列表中旧的位置，对应的，按下 <code>Ctrl-I</code> 将跳转至跳转列表中新的位置。这并不是属于 buffer 的特有方法，但它可以用来在不同的 buffers 中跳转。我将在第 5 章详细讲述关于跳转的知识。</li>
+<li>按下 <code>Ctrl-^</code> 跳转至先前编辑过的 buffer。</li>
 </ul>
 </li>
-<li>删除buffer可以输入<code>:bdelete</code>。这条命令也可以接收一个buffer编号（<code>:bdelete 3</code>将删除buffer #3）或一个文件名（<code>:bdelete</code>然后按<code>&lt;Tab&gt;</code>自动补全文件名），感觉没什么用，使用<code>Ctrl-i/o</code>仍然可以切换出来。</li>
+<li>删除 buffer 可以输入 <code>:bdelete</code>。这条命令也可以接收一个 buffer 编号（<code>:bdelete 3</code>将删除 buffer #3）或一个文件名（<code>:bdelete</code> 然后按 <code>&lt;Tab&gt; </code>自动补全文件名），感觉没什么用，使用 <code>Ctrl-i/o</code> 仍然可以切换出来。</li>
 </ol>
-<h3 id="退出Vim"><a href="#退出Vim" class="headerlink" title="退出Vim"></a>退出Vim</h3><p>如果有多个buffer，可以使用<code>:qall</code>、<code>:qall!</code>、<code>:wqall</code>，这跟<code>:wq</code>一样很好理解，测试all可以缩写成a</p>
-<h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><p>窗口、视图，及我们看到的vim界面。</p>
-<p>在vim编辑界面，使用<code>:split filename</code> 或者 <code>:vsplit filename</code> 、<code>:new filename</code>可以在当前页面分割窗口，同时显示多个buffer。这个最终的显示效果跟同时打开多个窗口是一样的。</p>
+<h3 id="退出-Vim"><a href="#退出-Vim" class="headerlink" title="退出 Vim"></a>退出 Vim</h3><p>如果有多个 buffer，可以使用 <code>:qall</code>、<code>:qall!</code>、<code>:wqall</code>，这跟 <code>:wq</code> 一样很好理解，测试 all 可以缩写成 a.</p>
+<h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><p>窗口、视图，及我们看到的 vim 界面。</p>
+<p>在 vim 编辑界面，使用 <code>:split filename</code>  或者  <code>:vsplit filename</code> 、<code>:new filename</code> 可以在当前页面分割窗口，同时显示多个 buffer。这个最终的显示效果跟同时打开多个窗口是一样的。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim -o2 txt1 txt2 <span class="comment">#水平分割</span></span><br><span class="line">vim -O3 txt1 txt2 txt3 <span class="comment">#垂直分割</span></span><br></pre></td></tr></table></figure>
 
-<p>在分割的窗口之间切换编辑，可以使用<code>Ctrl-W</code> 前缀键，再按<code>hjkl</code>切换左上下右。</p>
-<p>在vim编辑界面，也可以直接创建新窗口：</p>
+<p>在分割的窗口之间切换编辑，可以使用 <code>Ctrl-W</code>  前缀键，再按 <code>hjkl</code> 切换左上下右。</p>
+<p>在 vim 编辑界面，也可以直接创建新窗口：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Ctrl-W V    打开一个新的垂直分割的窗口</span><br><span class="line">Ctrl-W S    打开一个新的水平分割的窗口</span><br><span class="line">Ctrl-W C    关闭一个窗口</span><br><span class="line">Ctrl-W O    除了当前窗口，关闭所有其他的窗口</span><br></pre></td></tr></table></figure>
 
 
@@ -2767,15 +2767,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p> 在vim编辑界面，也可以直接创建新Tabs：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">:tabnew file.txt    <span class="comment">#在tab中打开一个文件</span></span><br><span class="line">:tabclose           <span class="comment">#关闭当前tab</span></span><br><span class="line">gt                  <span class="comment">#切换至下一个tab</span></span><br><span class="line">gT                  <span class="comment">#切换至上一个tab</span></span><br></pre></td></tr></table></figure>
 
-<p>也可以直接打开多Tabs：</p>
+<p>也可以直接打开多 Tabs：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim -p txt1 txt2 txt3</span><br></pre></td></tr></table></figure>
 
-<p>多个tabs的好处是，你可以让第一个vim页面布局水平显示2个窗口，第二个vim页面布局垂直显示3个窗口。</p>
-<h3 id="三维移动"><a href="#三维移动" class="headerlink" title="三维移动"></a>三维移动</h3><p>如果把windows比喻是x-y轴，buffer比喻是z轴，光标在x-y轴上下左右移动，在z轴前后移动，整体构成一种三维移动感。</p>
+<p>多个 tabs 的好处是，你可以让第一个 vim 页面布局水平显示 2 个窗口，第二个 vim 页面布局垂直显示 3 个窗口。</p>
+<h3 id="三维移动"><a href="#三维移动" class="headerlink" title="三维移动"></a>三维移动</h3><p>如果把 windows 比喻是 x-y 轴，buffer 比喻是 z 轴，光标在 x-y 轴上下左右移动，在 z 轴前后移动，整体构成一种三维移动感。</p>
 <h3 id="适合自己的工作流程"><a href="#适合自己的工作流程" class="headerlink" title="适合自己的工作流程"></a>适合自己的工作流程</h3><ol>
-<li>先用buffer存储所有可能需要修改的文件。Vim就算打开很多buffer，始终只会看到1个buffer（假设只有1个window），这样可以集中注意力，也能快速切换buffer。</li>
-<li>当对比文档、读文档、追踪代码流的时候，保持屏幕不操过3个window。</li>
-<li>使用tmux工具来代替tabs</li>
+<li>先用 buffer 存储所有可能需要修改的文件。 Vim 就算打开很多 buffer，始终只会看到 1 个 buffer（假设只有1个 window），这样可以集中注意力，也能快速切换 buffer。</li>
+<li>当对比文档、读文档、追踪代码流的时候，保持屏幕不操过 3 个 window。</li>
+<li>使用tmux工具来代替 tabs</li>
 </ol>
 
 </div>
@@ -2798,10 +2798,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-12T15:01:55+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-16T00:25:29+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年5月12日</p>
+    <p>更新于：2022年5月16日</p>
   </a>
 </div>
 
@@ -2871,21 +2871,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/2022/05/12/vim-note-03/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Vim-note-03</p>
-          <p class='content'>第3章 打开和搜索文件如何在Vim中快速搜索？
+          <p class='content'>第 3 章 打开和搜索文件如何在 Vim 中快速搜索？
 
 不依赖插件搜索
 使用fzf插件搜索
 
-打开和编辑文件要在Vim中打开一个文件，可以使用:edit
+打开和编辑文件要在 Vim 中打开一个文件，可以使用 :edit
 1:edit file.txt
-
-如果文件存在...</p>
+...</p>
         </a>
       
       
         <a class='next' href='/2022/05/09/vim-note-01/'>
           <p class='title'>Vim-note-01<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>第1章 起步参数123vim --version  #查看vim版本vim +%s/abc/def/g number.txt #打开number.txt,并立即把abc替换成defvim -c ...</p>
+          <p class='content'>第 1 章 起步参数123vim --version  #查看vim版本vim +%s/abc/def/g number.txt #打开number.txt,并立即把abc替换成defvim -...</p>
         </a>
       
     </div>
@@ -2934,7 +2933,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC2%E7%AB%A0-%E7%BC%93%E5%86%B2%E5%8C%BA%EF%BC%88Buffers%EF%BC%89%EF%BC%8C%E7%AA%97%E5%8F%A3%EF%BC%88Windows%EF%BC%89%E5%92%8C%E9%80%89%E9%A1%B9%E5%8D%A1%EF%BC%88Tabs%EF%BC%89"><span class="toc-text">第2章 缓冲区（Buffers），窗口（Windows）和选项卡（Tabs）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Buffers"><span class="toc-text">Buffers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%80%E5%87%BAVim"><span class="toc-text">退出Vim</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows"><span class="toc-text">Windows</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tabs"><span class="toc-text">Tabs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E7%BB%B4%E7%A7%BB%E5%8A%A8"><span class="toc-text">三维移动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%82%E5%90%88%E8%87%AA%E5%B7%B1%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-text">适合自己的工作流程</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC-2-%E7%AB%A0-%E7%BC%93%E5%86%B2%E5%8C%BA%EF%BC%88Buffers%EF%BC%89%EF%BC%8C%E7%AA%97%E5%8F%A3%EF%BC%88Windows%EF%BC%89%E5%92%8C%E9%80%89%E9%A1%B9%E5%8D%A1%EF%BC%88Tabs%EF%BC%89"><span class="toc-text">第 2 章 缓冲区（Buffers），窗口（Windows）和选项卡（Tabs）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Buffers"><span class="toc-text">Buffers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%80%E5%87%BA-Vim"><span class="toc-text">退出 Vim</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows"><span class="toc-text">Windows</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tabs"><span class="toc-text">Tabs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E7%BB%B4%E7%A7%BB%E5%8A%A8"><span class="toc-text">三维移动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%82%E5%90%88%E8%87%AA%E5%B7%B1%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-text">适合自己的工作流程</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -4067,7 +4066,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"阿珂","url":"http://example.com/","logo":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/imags/diary168.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"阿珂"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/05/10/vim-note-02/","name":"Vim-note-02"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Vim-note-02","description":"","datePublished":"2022-05-10T06:17:08.000Z","dateModified":"2022-05-12T07:01:55.081Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/05/10/vim-note-02/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/imags/diary168.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"阿珂","logo":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}},"url":"http://example.com/2022/05/10/vim-note-02/","wordCount":0,"keywords":"vim","image":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"阿珂","url":"http://example.com/","logo":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/imags/diary168.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"阿珂"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/05/10/vim-note-02/","name":"Vim-note-02"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Vim-note-02","description":"","datePublished":"2022-05-10T06:17:08.000Z","dateModified":"2022-05-15T16:25:29.831Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/05/10/vim-note-02/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/imags/diary168.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"阿珂","logo":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}},"url":"http://example.com/2022/05/10/vim-note-02/","wordCount":0,"keywords":"vim","image":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}}]</script>
 
 
 

@@ -39,11 +39,11 @@
 <meta property="og:title" content="Ansible-note-02">
 <meta property="og:url" content="http://example.com/2022/05/15/ansible-note-02/index.html">
 <meta property="og:site_name" content="阿珂">
-<meta property="og:description" content="第2章 部署AnsibleAnsible配置文件4种配置文件优先级Ansible配置文件按优先级匹配，匹配后会忽视其余配置：  变量指定，优先级别最高，不推荐，不常用。 1export ANSIBLE&#x3D;CONFIG&#x3D;&#x2F;tmp&#x2F;ansible.cfg 	  工作目录配置文件，您当前执行命令的文件夹，pwd查看，第二优先级，推荐，常用。  家目录配置文件，第三优先级，备用目录  默认配置文件，&#x2F;etc">
+<meta property="og:description" content="第 2 章 部署 AnsibleAnsible 配置文件4 种配置文件优先级Ansible 配置文件按优先级匹配，匹配后会忽视其余配置：  变量指定，优先级别最高，不推荐，不常用。 1export ANSIBLE&#x3D;CONFIG&#x3D;&#x2F;tmp&#x2F;ansible.cfg 	  工作目录配置文件，您当前执行命令的文件夹， pwd 查看，第二优先级，推荐，常用。  家目录配置文件，第三优先级，备用目录  默认配">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-05-15T15:24:31.000Z">
-<meta property="article:modified_time" content="2022-05-15T16:14:43.865Z">
+<meta property="article:modified_time" content="2022-05-15T16:25:43.895Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Ansible">
 <meta name="twitter:card" content="summary">
@@ -1913,7 +1913,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.3690b000.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.1d2dd3e0.js","rightMenus":"/js/plugins/rightMenus.3669cc79.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.06d40311.js"},"css":{"style":"/css/style.a03aff9c.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1652631307096),
+    lastupdate: new Date(1652632029175),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2739,27 +2739,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <div class="story post-story"><h2 id="第2章-部署Ansible"><a href="#第2章-部署Ansible" class="headerlink" title="第2章 部署Ansible"></a>第2章 部署Ansible</h2><h3 id="Ansible配置文件"><a href="#Ansible配置文件" class="headerlink" title="Ansible配置文件"></a>Ansible配置文件</h3><h4 id="4种配置文件优先级"><a href="#4种配置文件优先级" class="headerlink" title="4种配置文件优先级"></a>4种配置文件优先级</h4><p>Ansible配置文件按优先级匹配，<u><strong>匹配后会忽视其余配置</strong></u>：</p>
+    <div class="story post-story"><h2 id="第-2-章-部署-Ansible"><a href="#第-2-章-部署-Ansible" class="headerlink" title="第 2 章 部署 Ansible"></a>第 2 章 部署 Ansible</h2><h3 id="Ansible-配置文件"><a href="#Ansible-配置文件" class="headerlink" title="Ansible 配置文件"></a>Ansible 配置文件</h3><h4 id="4-种配置文件优先级"><a href="#4-种配置文件优先级" class="headerlink" title="4 种配置文件优先级"></a>4 种配置文件优先级</h4><p>Ansible 配置文件按优先级匹配，<u><strong>匹配后会忽视其余配置</strong></u>：</p>
 <ol>
 <li><p>变量指定，优先级别最高，<strong>不推荐，不常用。</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> ANSIBLE=CONFIG=/tmp/ansible.cfg 	</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>工作目录配置文件，您当前执行命令的文件夹，<code>pwd</code>查看，第二优先级，<strong>推荐，常用。</strong></p>
+<li><p>工作目录配置文件，您当前执行命令的文件夹， <code>pwd</code> 查看，第二优先级，<strong>推荐，常用。</strong></p>
 </li>
 <li><p>家目录配置文件，第三优先级，<strong>备用目录</strong></p>
 </li>
 <li><p>默认配置文件，<code>/etc/ansible/ansible.cfg</code>，<strong>一般不使用</strong></p>
 </li>
 </ol>
-<h4 id="常规ansible配置"><a href="#常规ansible配置" class="headerlink" title="常规ansible配置"></a>常规<code>ansible</code>配置</h4><p>配置示例</p>
+<h4 id="常规-ansible-配置"><a href="#常规-ansible-配置" class="headerlink" title="常规 ansible 配置"></a>常规 <code>ansible</code> 配置</h4><p>配置示例</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">[defaults]</span><br><span class="line"><span class="comment">#指定清单文件的位置</span></span><br><span class="line">inventory = ./inventory</span><br><span class="line"><span class="comment">#要在受管理主机上登陆的用户名，如果未指定，则使用当前用户名</span></span><br><span class="line">remote_user = username</span><br><span class="line"><span class="comment">#是否提示输入SSH密码，如果使用SSH公钥验证，则可以是false</span></span><br><span class="line">ask_pass = <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">[privilege_escalation]</span><br><span class="line"><span class="comment">#连接后是否自动在受管理主机上切换用户（通常切换为root），这也可以通过play来指定</span></span><br><span class="line">become = <span class="literal">true</span></span><br><span class="line"><span class="comment">#如何切换用户（通常为sudo，这也是默认设置，但也可选择su）</span></span><br><span class="line">becom_method = sudo</span><br><span class="line"><span class="comment">#要在受管主机上切换的用户（通常为root，也是默认值）</span></span><br><span class="line">becom_user = root</span><br><span class="line"><span class="comment">#是否要为become_method提示输入密码，默认为false</span></span><br><span class="line">becom_ask_pass = <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="Ansible管理清单文件"><a href="#Ansible管理清单文件" class="headerlink" title="Ansible管理清单文件"></a>Ansible管理清单文件</h3><ol>
-<li><code>inventory</code>文件就是简单文本，使用ini格式记录受控主机清单（文件名不是必须inventory）。</li>
-<li><code>inventory</code>文件可以使用简单范围语法<code>[START:END]</code>来指定字母或者数字的范围。</li>
-<li><code>inventory</code>文件可以在<code>ansible.cfg</code>定义位置，也可以使用<code>-i</code>参数指定。</li>
+<h3 id="Ansible-管理清单文件"><a href="#Ansible-管理清单文件" class="headerlink" title="Ansible 管理清单文件"></a>Ansible 管理清单文件</h3><ol>
+<li><code>inventory</code> 文件就是简单文本，使用 ini 格式记录受控主机清单（文件名不是必须 inventory ）。</li>
+<li><code>inventory</code> 文件可以使用简单范围语法 <code>[START:END]</code> 来指定字母或者数字的范围。</li>
+<li><code>inventory</code> 文件可以在 <code>ansible.cfg</code> 定义位置，也可以使用 <code>-i</code> 参数指定。</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">192.168.1.2		<span class="comment">#可以直接写ip地址</span></span><br><span class="line">servera		<span class="comment">#也可以直接写主机名</span></span><br><span class="line"></span><br><span class="line">[myself] 		<span class="comment">#定义组名，不能包含空格</span></span><br><span class="line">localhost   <span class="comment">#包含的主机</span></span><br><span class="line"></span><br><span class="line">[intranetweb]  </span><br><span class="line">servera		</span><br><span class="line">serverb</span><br><span class="line"></span><br><span class="line">[internetweb]</span><br><span class="line">serverc</span><br><span class="line">serverd</span><br><span class="line"></span><br><span class="line">[<span class="built_in">test</span>]</span><br><span class="line">server[b:d]			<span class="comment">#指serverb、serverc、serverd</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[web:children]		<span class="comment">#定义嵌套组，必须以:children结尾</span></span><br><span class="line">intranetweb				<span class="comment">#嵌套的组名</span></span><br><span class="line">internetweb</span><br></pre></td></tr></table></figure>
 
@@ -2829,7 +2829,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-16T00:14:43+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-16T00:25:43+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年5月16日</p>
@@ -2909,8 +2909,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 这里：
 123command是 ls选项是 -l参数是 /home/user
 
-在CLI字符界面ESC快捷键组合:
-ESC...</p>
+在 CLI 字符界面 ESC 快捷键组合:...</p>
         </a>
       
     </div>
@@ -2959,7 +2958,7 @@ ESC...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC2%E7%AB%A0-%E9%83%A8%E7%BD%B2Ansible"><span class="toc-text">第2章 部署Ansible</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Ansible%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">Ansible配置文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4%E7%A7%8D%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-text">4种配置文件优先级</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E8%A7%84ansible%E9%85%8D%E7%BD%AE"><span class="toc-text">常规ansible配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ansible%E7%AE%A1%E7%90%86%E6%B8%85%E5%8D%95%E6%96%87%E4%BB%B6"><span class="toc-text">Ansible管理清单文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ansible-%E5%91%BD%E4%BB%A4%E8%A1%8C%E9%80%89%E9%A1%B9"><span class="toc-text">Ansible 命令行选项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ansible-adhoc"><span class="toc-text">Ansible adhoc</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC-2-%E7%AB%A0-%E9%83%A8%E7%BD%B2-Ansible"><span class="toc-text">第 2 章 部署 Ansible</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Ansible-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">Ansible 配置文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E7%A7%8D%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-text">4 种配置文件优先级</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E8%A7%84-ansible-%E9%85%8D%E7%BD%AE"><span class="toc-text">常规 ansible 配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ansible-%E7%AE%A1%E7%90%86%E6%B8%85%E5%8D%95%E6%96%87%E4%BB%B6"><span class="toc-text">Ansible 管理清单文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ansible-%E5%91%BD%E4%BB%A4%E8%A1%8C%E9%80%89%E9%A1%B9"><span class="toc-text">Ansible 命令行选项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ansible-adhoc"><span class="toc-text">Ansible adhoc</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -4092,7 +4091,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"阿珂","url":"http://example.com/","logo":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/imags/diary168.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"阿珂"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/05/15/ansible-note-02/","name":"Ansible-note-02"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Ansible-note-02","description":"","datePublished":"2022-05-15T15:24:31.000Z","dateModified":"2022-05-15T16:14:43.865Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/05/15/ansible-note-02/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/imags/diary168.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"阿珂","logo":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}},"url":"http://example.com/2022/05/15/ansible-note-02/","wordCount":0,"keywords":"Ansible","image":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"阿珂","url":"http://example.com/","logo":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/imags/diary168.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"阿珂"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/05/15/ansible-note-02/","name":"Ansible-note-02"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Ansible-note-02","description":"","datePublished":"2022-05-15T15:24:31.000Z","dateModified":"2022-05-15T16:25:43.895Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/05/15/ansible-note-02/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/imags/diary168.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"阿珂","logo":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}},"url":"http://example.com/2022/05/15/ansible-note-02/","wordCount":0,"keywords":"Ansible","image":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}}]</script>
 
 
 

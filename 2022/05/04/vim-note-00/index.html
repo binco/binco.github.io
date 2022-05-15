@@ -39,11 +39,11 @@
 <meta property="og:title" content="Vim-note-00">
 <meta property="og:url" content="http://example.com/2022/05/04/vim-note-00/index.html">
 <meta property="og:site_name" content="阿珂">
-<meta property="og:description" content="学习连接 https:&#x2F;&#x2F;github.com&#x2F;wsdjeg&#x2F;Learn-Vim_zh_cn 第0章 请先阅读 本章提到vimtutot是一个很好的学习途径。这个命令可以打开一个vim教学指南，我从头学过一遍，知道了可以使用:!在不退出vim的情况下运行shell命令，推荐大家都使用一次  还提到Vimscript脚本语言，“您当然可以继续使用Vim而不了解任何Vimscript知识，但了解它可以">
+<meta property="og:description" content="学习连接 https:&#x2F;&#x2F;github.com&#x2F;wsdjeg&#x2F;Learn-Vim_zh_cn 第 0 章 请先阅读 本章提到 vimtutot 是一个很好的学习途径。这个命令可以打开一个 Vim 教学指南，我从头学过一遍，知道了可以使用:!在不退出 vim 的情况下运行shell命令，推荐大家都使用一次  还提到 Vimscript 脚本语言，“您当然可以继续使用 Vim 而不了解任何 Vimsc">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-05-04T08:11:39.000Z">
-<meta property="article:modified_time" content="2022-05-11T17:46:37.484Z">
+<meta property="article:modified_time" content="2022-05-15T16:25:36.696Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="vim">
 <meta name="twitter:card" content="summary">
@@ -1913,7 +1913,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.3690b000.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.1d2dd3e0.js","rightMenus":"/js/plugins/rightMenus.3669cc79.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.06d40311.js"},"css":{"style":"/css/style.a03aff9c.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1652631307096),
+    lastupdate: new Date(1652632029175),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2740,16 +2740,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <p>学习连接 <a target="_blank" rel="noopener" href="https://github.com/wsdjeg/Learn-Vim_zh_cn">https://github.com/wsdjeg/Learn-Vim_zh_cn</a></p>
-<div class="story post-story"><h2 id="第0章-请先阅读"><a href="#第0章-请先阅读" class="headerlink" title="第0章 请先阅读"></a>第0章 请先阅读</h2><ol>
-<li><p>本章提到vimtutot是一个很好的学习途径。这个命令可以打开一个vim教学指南，我从头学过一遍，知道了可以使用<code>:!</code>在不退出vim的情况下运行shell命令，推荐大家都使用一次</p>
+<div class="story post-story"><h2 id="第-0-章-请先阅读"><a href="#第-0-章-请先阅读" class="headerlink" title="第 0 章 请先阅读"></a>第 0 章 请先阅读</h2><ol>
+<li><p>本章提到 vimtutot 是一个很好的学习途径。这个命令可以打开一个 Vim 教学指南，我从头学过一遍，知道了可以使用<code>:!</code>在不退出 vim 的情况下运行shell命令，推荐大家都使用一次</p>
 </li>
-<li><p>还提到Vimscript脚本语言，“您当然可以继续使用Vim而不了解任何Vimscript知识，但了解它可以使您更加擅长Vim。”</p>
+<li><p>还提到 Vimscript 脚本语言，“您当然可以继续使用 Vim 而不了解任何 Vimscript 知识，但了解它可以使您更加擅长Vim。”</p>
 </li>
 <li><p>锻炼肌肉记忆，在实践中探索，能够本能、自然地使用命令。</p>
 </li>
 <li><p>作者提前说明，在本教程中对于经常使用的命令使用简写，对于不经常使用的命令使用全程。<code>:join可以简写成:j</code></p>
 </li>
-<li><p>vimrc选项，可以看作一个配置文件，需要<code>:source %</code>使其生效。它会使vim配置永久生效，而不是临时生效。这个跟我最近刚知道的ssh_config配置文件相似，感觉是个好东西。</p>
+<li><p>vimrc 选项，可以看作一个配置文件，需要<code>:source %</code>使其生效。它会使 vim 配置永久生效，而不是临时生效。这个跟我最近刚知道的 ssh_config 配置文件相似，感觉是个好东西。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#这里收集一些自用的vimrc文件配置</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> nocompatible  <span class="comment">#开启所有vim扩展</span></span><br><span class="line"><span class="built_in">set</span> number        <span class="comment">#开启行号</span></span><br><span class="line"><span class="built_in">set</span> hidden        <span class="comment">#开启缓冲区快速切换，见vim-note-02</span></span><br><span class="line">syntax on         <span class="comment">#开启语法高亮</span></span><br></pre></td></tr></table></figure>
 
 
@@ -2778,10 +2778,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-12T01:46:37+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-16T00:25:36+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年5月12日</p>
+    <p>更新于：2022年5月16日</p>
   </a>
 </div>
 
@@ -2915,7 +2915,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC0%E7%AB%A0-%E8%AF%B7%E5%85%88%E9%98%85%E8%AF%BB"><span class="toc-text">第0章 请先阅读</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC-0-%E7%AB%A0-%E8%AF%B7%E5%85%88%E9%98%85%E8%AF%BB"><span class="toc-text">第 0 章 请先阅读</span></a></li></ol>
     </div>
   </section>
 
@@ -4048,7 +4048,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"阿珂","url":"http://example.com/","logo":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/imags/diary168.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"阿珂"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/05/04/vim-note-00/","name":"Vim-note-00"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Vim-note-00","description":"","datePublished":"2022-05-04T08:11:39.000Z","dateModified":"2022-05-11T17:46:37.484Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/05/04/vim-note-00/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/imags/diary168.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"阿珂","logo":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}},"url":"http://example.com/2022/05/04/vim-note-00/","wordCount":0,"keywords":"vim","image":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"阿珂","url":"http://example.com/","logo":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/imags/diary168.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"阿珂"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/05/04/vim-note-00/","name":"Vim-note-00"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Vim-note-00","description":"","datePublished":"2022-05-04T08:11:39.000Z","dateModified":"2022-05-15T16:25:36.696Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/05/04/vim-note-00/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/imags/diary168.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"阿珂","logo":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}},"url":"http://example.com/2022/05/04/vim-note-00/","wordCount":0,"keywords":"vim","image":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}}]</script>
 
 
 
