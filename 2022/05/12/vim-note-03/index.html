@@ -43,7 +43,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-05-12T07:14:28.000Z">
-<meta property="article:modified_time" content="2022-05-15T16:27:01.783Z">
+<meta property="article:modified_time" content="2022-05-16T16:04:58.705Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="vim">
 <meta name="twitter:card" content="summary">
@@ -1913,7 +1913,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.3690b000.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.1d2dd3e0.js","rightMenus":"/js/plugins/rightMenus.3669cc79.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.06d40311.js"},"css":{"style":"/css/style.a03aff9c.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1652632029175),
+    lastupdate: new Date(1652717122968),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2765,7 +2765,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><code>/usr/include</code> 表示在C编译器头文件目录下搜索，可以忽略不设置。</li>
 </ul>
 <p>可以将 <code>set path+=&#123;您需要添加的目录&#125;</code>添加到您的 vimrc 文件中，这样 find 就能搜索设置的目录。</p>
-<h3 id="使用grep命令在文件中搜索"><a href="#使用grep命令在文件中搜索" class="headerlink" title="使用grep命令在文件中搜索"></a>使用grep命令在文件中搜索</h3>
+<h3 id="使用grep命令在文件中搜索"><a href="#使用grep命令在文件中搜索" class="headerlink" title="使用grep命令在文件中搜索"></a>使用grep命令在文件中搜索</h3><p>**<u>在 Vim 内部</u>**查找文件中内容的方法， Vim 提供两种：</p>
+<ul>
+<li>内部 grep ， <code>:vim</code></li>
+<li>外部 grep ， <code>:grep</code></li>
+</ul>
+<p><code>:vim </code>有以下语法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">:vim /pattern/ file  <span class="comment">#先导航到第一个结果</span></span><br><span class="line">:copen		<span class="comment">#再打开quickfix窗口查看所有搜索结果</span></span><br><span class="line">:q		<span class="comment">#退出</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>/pattern/</code> 是您要搜索的内容的正则表达式。</li>
+<li><code>file</code> 是文件参数。您可以传入多个参数。Vim将在文件中搜索所有匹配正则表达式的内容。类似于<code>:find</code>，您可以传入*和**通配符。</li>
+<li><em>如果只搜索文件本身内部，大可直接 <code>:/</code> 搜索即可，不必使用gre命令搜索。</em></li>
+</ul>
+<p><code>:grep</code> 有一下语法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:grep -R <span class="string">&quot;lunch&quot;</span> filename		<span class="comment">#使用方法同终端 grep 命令一致</span></span><br></pre></td></tr></table></figure>
+
+<p>注意它遵循的是终端 grep 的语法<code>&quot;pattern&quot;</code>，它同样使用 ‘quickfix’ 来显示所有的匹配结果。</p>
+<h3 id="用-Netrw-浏览文件"><a href="#用-Netrw-浏览文件" class="headerlink" title="用 Netrw 浏览文件"></a>用 Netrw 浏览文件</h3><p>使用 Vim 打开一个目录就会进入 Netrw 界面。</p>
+<p>在 Vim 内部，可以使用 <code>:edit 目录</code> 来打开 Netrw 界面。</p>
+<p>个人觉得 Netrw 没什么便利性，一笔带过。</p>
+
 </div>
   </div>
   
@@ -2786,10 +2806,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-16T00:27:01+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-17T00:04:58+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年5月16日</p>
+    <p>更新于：2022年5月17日</p>
   </a>
 </div>
 
@@ -2921,7 +2941,7 @@ buffer 是一个内存中的一个空间，每当 vim 打开一个文件，该�
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC-3-%E7%AB%A0-%E6%89%93%E5%BC%80%E5%92%8C%E6%90%9C%E7%B4%A2%E6%96%87%E4%BB%B6"><span class="toc-text">第 3 章 打开和搜索文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E5%BC%80%E5%92%8C%E7%BC%96%E8%BE%91%E6%96%87%E4%BB%B6"><span class="toc-text">打开和编辑文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-find-%E5%91%BD%E4%BB%A4%E6%90%9C%E7%B4%A2%E6%96%87%E4%BB%B6"><span class="toc-text">使用 find 命令搜索文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Find-%E5%92%8C-Path"><span class="toc-text">Find 和 Path</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8grep%E5%91%BD%E4%BB%A4%E5%9C%A8%E6%96%87%E4%BB%B6%E4%B8%AD%E6%90%9C%E7%B4%A2"><span class="toc-text">使用grep命令在文件中搜索</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC-3-%E7%AB%A0-%E6%89%93%E5%BC%80%E5%92%8C%E6%90%9C%E7%B4%A2%E6%96%87%E4%BB%B6"><span class="toc-text">第 3 章 打开和搜索文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E5%BC%80%E5%92%8C%E7%BC%96%E8%BE%91%E6%96%87%E4%BB%B6"><span class="toc-text">打开和编辑文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-find-%E5%91%BD%E4%BB%A4%E6%90%9C%E7%B4%A2%E6%96%87%E4%BB%B6"><span class="toc-text">使用 find 命令搜索文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Find-%E5%92%8C-Path"><span class="toc-text">Find 和 Path</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8grep%E5%91%BD%E4%BB%A4%E5%9C%A8%E6%96%87%E4%BB%B6%E4%B8%AD%E6%90%9C%E7%B4%A2"><span class="toc-text">使用grep命令在文件中搜索</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8-Netrw-%E6%B5%8F%E8%A7%88%E6%96%87%E4%BB%B6"><span class="toc-text">用 Netrw 浏览文件</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -4054,7 +4074,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"阿珂","url":"http://example.com/","logo":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/imags/diary168.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"阿珂"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/05/12/vim-note-03/","name":"Vim-note-03"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Vim-note-03","description":"","datePublished":"2022-05-12T07:14:28.000Z","dateModified":"2022-05-15T16:27:01.783Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/05/12/vim-note-03/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/imags/diary168.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"阿珂","logo":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}},"url":"http://example.com/2022/05/12/vim-note-03/","wordCount":0,"keywords":"vim","image":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"阿珂","url":"http://example.com/","logo":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/imags/diary168.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"阿珂"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/05/12/vim-note-03/","name":"Vim-note-03"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Vim-note-03","description":"","datePublished":"2022-05-12T07:14:28.000Z","dateModified":"2022-05-16T16:04:58.705Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/05/12/vim-note-03/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/imags/diary168.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"阿珂","logo":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}},"url":"http://example.com/2022/05/12/vim-note-03/","wordCount":0,"keywords":"vim","image":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}}]</script>
 
 
 
