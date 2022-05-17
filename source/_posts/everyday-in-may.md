@@ -22,8 +22,8 @@ tags: 打卡
 - {% checkbox green :: 5-13  %}
 - {% checkbox green checked:: 5-14 🍅🍅🍅🍅🍅 ansible 配置及 inventory %}
 - {% checkbox green checked:: 5-15 🍅🍅🍅🍅🍅 ansible adhoc %}
-- {% checkbox green checked:: 🍅 vim grep 5-16 %}
-- {% checkbox green :: 5-17 %}
+- {% checkbox green checked:: 5-16 🍅 vim grep %}
+- {% checkbox green checked:: 5-17 🍅 🍅 git add branch %}
 - {% checkbox green :: 5-18 %}
 - {% checkbox green :: 5-19 %}
 
