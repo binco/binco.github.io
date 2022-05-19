@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2022/05/12/hello-world/"/>
+  <link rel="canonical" href="http://example.com/2022/05/19/ansible-note-03/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://npm.elemecdn.com'>
@@ -31,20 +31,21 @@
   <!-- feed -->
   <!-- 页面元数据 -->
   <pjax>
-  <title>Hello World - 阿珂</title>
-  <meta name="keywords" content="null">
+  <title>ansible-note-03 - 阿珂</title>
+  <meta name="keywords" content="Ansible,null">
   <meta desc name="description" content="阿珂 - John Doe - 阿珂">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2022/05/12/hello-world/index.html">
+<meta property="og:title" content="ansible-note-03">
+<meta property="og:url" content="http://example.com/2022/05/19/ansible-note-03/index.html">
 <meta property="og:site_name" content="阿珂">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="理解 Playbook如果说 adhoc 运行一个 task 任务，那么 Playbook 则可以运行多个 task任务。 Playbook 可以包含多个 play 项目，每个 play 项目可以有多个 task 任务。 可以把 Playbook 当成一个精心准备的剧本，每个 play 就是一个个剧集，每个 task 就是一个个情节。 Playbook 格式Playbook 是以 YAML 格式编">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-05-11T16:36:07.434Z">
-<meta property="article:modified_time" content="2022-05-11T16:36:07.434Z">
+<meta property="article:published_time" content="2022-05-19T13:53:10.000Z">
+<meta property="article:modified_time" content="2022-05-19T16:08:40.213Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Ansible">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   </pjax>
@@ -2660,7 +2661,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/12/hello-world/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/19/ansible-note-03/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="阿珂">
   </span>
@@ -2681,7 +2682,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        Hello World
+        ansible-note-03
       </h1>
       <div class='new-meta-box'>
         
@@ -2702,10 +2703,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-05-12T00:36:07+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-05-19T21:53:10+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年5月12日</p>
+    <p>发布于：2022年5月19日</p>
   </a>
 </div>
 
@@ -2738,21 +2739,32 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<div class="story post-story"><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <h3 id="理解-Playbook"><a href="#理解-Playbook" class="headerlink" title="理解 Playbook"></a>理解 Playbook</h3><p>如果说 adhoc 运行一个 task 任务，那么 Playbook 则可以运行多个 task任务。</p>
+<p>Playbook 可以包含多个 play 项目，每个 play 项目可以有多个 task 任务。</p>
+<p>可以把 Playbook 当成一个精心准备的剧本，每个 play 就是一个个剧集，每个 task 就是一个个情节。</p>
+<h3 id="Playbook-格式"><a href="#Playbook-格式" class="headerlink" title="Playbook 格式"></a>Playbook 格式</h3><p>Playbook 是以 YAML 格式编写的文本文件，通常使用扩展名 yml 保存，Playbook 使用空格字符缩进来表示其数据结构。YAML 对于缩进的空格数量没有严格的要求，但有两个基本的规则：</p>
+<blockquote>
+<ul>
+<li>处于层次结构中同一级别的数据元素（例如同一列表中的项目）必须具有相同的缩进量。</li>
+<li>如果项目属于其他项目的子项，其缩进量必须大于父项。</li>
+</ul>
+</blockquote>
+<p>Playbook 开头有三个破折号（—）组成，这是文档开始标记。结尾使用三个圆点（…）作为文档借宿标记，尽管在实践中这通常会省略。在两个标记之间，会以一个play列表的形式来定义 Playbook。</p>
+<p>Playbook 结构：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">---</span>  <span class="comment"># 文档开始标记</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">A</span>  <span class="comment"># play 项目1</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">a</span>  <span class="comment"># task 任务模块1</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">b</span>  <span class="comment"># task 任务模块2</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">c</span>  </span><br><span class="line"><span class="bullet">-</span> <span class="string">B</span>  <span class="comment"># play 项目2</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">a</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">b</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">c</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">C</span>  <span class="comment"># play 项目3</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">a</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">b</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">c</span></span><br><span class="line"><span class="string">...</span>  <span class="comment"># 文档结束标记，可忽略</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>简单示例写法：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">---</span>   <span class="comment">#文档开始标记</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">ababab</span>  <span class="comment"># 一个 play 项目 A，可选，但最好有，用于命名 play，帮助记录用途</span></span><br><span class="line">  <span class="attr">hosts:</span> <span class="string">servera.lab.example.com</span>   <span class="comment"># 指定 play 项目中运行的主机或主机组，对应 inventory</span></span><br><span class="line">  <span class="attr">tasks:</span>            <span class="comment"># 指定 play 项目运行的任务模块</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">newbie</span>  <span class="comment"># 可选，但最好有，用于命名 task，帮助记录用途</span></span><br><span class="line">      <span class="attr">user:</span>         <span class="comment"># 一个 task 任务模块，通常包含参数子项 </span></span><br><span class="line">      <span class="attr">uid:</span> <span class="number">4000</span></span><br><span class="line">      <span class="attr">state:</span> <span class="string">present</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>playbook中的play和task列出的顺序很重要，因为ansible会按照顺序运行它。</p>
+<h3 id="运行-Playbook"><a href="#运行-Playbook" class="headerlink" title="运行 Playbook"></a>运行 Playbook</h3><p><code>ansible-playbook</code> 命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ansible-playbook --syntax-check test.yml <span class="comment">#验证 playbook 语法</span></span><br><span class="line">ansible-playbook test.yml  <span class="comment">#运行 playbook</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="执行空运行"><a href="#执行空运行" class="headerlink" title="执行空运行"></a>执行空运行</h3><p>使用 <code>-C</code> 参数</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible-playbook -C test.yml  <span class="comment">#空运行，仅报告直接结果，不会产生实际更改</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
-</div>
+
   </div>
   
   
@@ -2772,10 +2784,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-12T00:36:07+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-20T00:08:40+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年5月12日</p>
+    <p>更新于：2022年5月20日</p>
   </a>
 </div>
 
@@ -2783,6 +2795,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Ansible/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Ansible</p></a></div>
+  <span hidden itemprop="keywords">Ansible</span>
+
 
         
       
@@ -2794,7 +2810,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2022/05/12/hello-world/&title=Hello World - 阿珂&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2022/05/19/ansible-note-03/&title=ansible-note-03 - 阿珂&summary="
           
           >
           
@@ -2812,7 +2828,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class='hoverbox'>
           <a class='share'><img src="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC60lEQVR42u3aQXICMQwEQP7/6eSeStVaIy0gaN8A72K3L1OSHz/Gv+OBAAwYMGDAgFkD8wjH8R8dPvf39+rnqf2AAQMGDBgwYPbBVDd6+v3VgtPnq2DHBwIGDBgwYMCAWQtT3cBpAEw3Xt1wez9gwIABAwYMmK+DqQayqcJX9+DAgAEDBgwYMGCmCkqn31fngQEDBgwYMGA+H2aqENQd6zuRYMCAAQMGDJinwaQLf9fP8X7AgAEDBgwYMGtguqPaODsNcqcb/RkeYMCAAQMGDJg9MGlAOr3Q86rCVQoKBgwYMGDAgNkDkwap6oLT4Dh98ejyvWDAgAEDBgyYNTBdkGpDrrrQdP7pei+TLxgwYMCAAQPm7WGqL6oGrGoATNdRPTgwYMCAAQMGzF6YtIHVvdjTha1eRDqGBgMGDBgwYMCsgUkbY91C0/SGquBgwIABAwYMmM+D6V7Y6W7orgtDtzXcwIABAwYMGDAvg0kbU9VCUjo/Bb2t4QYGDBgwYMCAeTuYalBLN14tYHUvEJUPBgwYMGDAgAGzHubu4NYOYs0LTmDAgAEDBgyY/TBpsEpHFaIK1S58gQEDBgwYMGDWwXQbYd0GXRV26v1gwIABAwYMmL0wXYiphU816tLGIRgwYMCAAQNmH8yrAlUXvgp6HGTBgAEDBgwYMOtgnnYxZ/ggqusuBzwwYMCAAQMGzDqYboEpDWjdhlm6bjBgwIABAwbM58NcXrwpBr3T91YLWqfrBAMGDBgwYMDshZkuDE0Fs6l55QMCAwYMGDBgwKyBmQ5M0wWstPGXBkkwYMCAAQMGzD6YNNClF4PSwlT6/NMabmDAgAEDBgyYl8GkAep0AWkQTA+i2ngDAwYMGDBgwHwfzGmwurvwlf4OBgwYMGDAgPlemBTsrotAcWELDBgwYMCAAbMWptpw6zbIpgtcaaAEAwYMGDBgwOyFSRtX6fxuAasKefwcGDBgwIABA2YNjAEGDBgwYMCAWTZ+AWm85Q6L0jz5AAAAAElFTkSuQmCC">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAADA0lEQVR42u3aQVLDQAwEwPz/0/ABKEuaDVhO7y1gO7udy5TGry/rx/VCAAYMGDBgwKyBeQ3Xrw/+5brqfdPPp84DBgwYMGDAgNkHUw5AxevHGwv3E98PBgwYMGDAgFkL09149f5uQKsGxypU+TxgwIABAwYMmI+F6Q6sqgfuAoIBAwYMGDBgwKRFWFrAXd0/DZxgwIABAwYMmOfBTAuudIB1FfTSwPnnTSQYMGDAgAED5s9gTr3oc5fP4/OAAQMGDBgwYNbApGsKVw1y3efH5wEDBgwYMGDArIGZBqTqICkNXtViLt0/GDBgwIABA2YfTPVg0wIsDY7d/8eFHRgwYMCAAQNmLUz7QRfXTQNhGujGgzIwYMCAAQMGzBqYdIPvHmhNf6hxgQcGDBgwYMCAWQMzHURVB0XpddMBVbdoAwMGDBgwYMDsgzn14k764lA3cKaFXzv5ggEDBgwYMGBuC3PqhZ3uIGkKUv17+wcEAwYMGDBgwKyBqd54auCUwqU/2OVzwIABAwYMGDBrYaZflBZ06fPSgRcYMGDAgAEDZh/MtNjqbqBbgE2DYhW0XbiBAQMGDBgwYG4HUw1O0xeETgWwUy8SxYUbGDBgwIABA+a2MGlwS8He9YOU4cCAAQMGDBgwj4HpHjwdUJ0KnOPiDgwYMGDAgAGzBqYKkhZl3QFSWqCN9wEGDBgwYMCAWQtzfPBzqMBLB2XloAoGDBgwYMCAWQszDXzp4CgNkNOBGBgwYMCAAQPmOTDVYNYdGHWDXzWYTQdW8aAKDBgwYMCAAfPvMOmaFmTdImw6mGoP0sCAAQMGDBgwa2Bew3UK7lSgmxZ+l4MqMGDAgAEDBsztYboHTTeaDrBOwYIBAwYMGDBgngNzuiib/n1aBKbBFAwYMGDAgAHzeTBpMKx+f3ef3YAIBgwYMGDAgPlcmOp9734RqBsswYABAwYMGDD7YdKNd1da0E0HWGDAgAEDBgyY58BMi6tpcdY9eDrIKhd+YMCAAQMGDJg1MBYYMGDAgAEDZtn6Bgds4yygsSqRAAAAAElFTkSuQmCC">
           </div>
         </div>
       
@@ -2839,23 +2855,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2022/05/12/vim-note-03/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Vim-note-03</p>
-          <p class='content'>第 3 章 打开和搜索文件如何在 Vim 中快速搜索？
-
-不依赖插件搜索
-使用fzf插件搜索
-
-打开和编辑文件要在 Vim 中打开一个文件，可以使用 :edit
-1:edit file.txt
-...</p>
-        </a>
       
-      
-        <a class='next' href='/2022/05/10/vim-note-02/'>
-          <p class='title'>Vim-note-02<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>第 2 章 缓冲区（Buffers），窗口（Windows）和选项卡（Tabs）Buffers
-buffer 是一个内存中的一个空间，每当 vim 打开一个文件，该文件的数据就与一个 buffe...</p>
+        <a class='next' href='/2022/05/15/ansible-note-02/'>
+          <p class='title'>Ansible-note-02<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>第 2 章 部署 AnsibleAnsible 配置文件4 种配置文件优先级Ansible 配置文件按优先级匹配，匹配后会忽视其余配置：
+
+变量指定，优先级别最高，不推荐，不常用。
+1expor...</p>
         </a>
       
     </div>
@@ -2871,7 +2877,7 @@ buffer 是一个内存中的一个空间，每当 vim 打开一个文件，该�
   
   <article class="post white-box reveal shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2022/05/12/hello-world/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2022/05/19/ansible-note-03/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2904,7 +2910,7 @@ buffer 是一个内存中的一个空间，每当 vim 打开一个文件，该�
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%90%86%E8%A7%A3-Playbook"><span class="toc-text">理解 Playbook</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Playbook-%E6%A0%BC%E5%BC%8F"><span class="toc-text">Playbook 格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C-Playbook"><span class="toc-text">运行 Playbook</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E7%A9%BA%E8%BF%90%E8%A1%8C"><span class="toc-text">执行空运行</span></a></li></ol>
     </div>
   </section>
 
@@ -4037,7 +4043,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"阿珂","url":"http://example.com/","logo":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/imags/diary168.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"阿珂"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/05/12/hello-world/","name":"Hello World"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Hello World","description":"","datePublished":"2022-05-11T16:36:07.434Z","dateModified":"2022-05-11T16:36:07.434Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/05/12/hello-world/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/imags/diary168.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"阿珂","logo":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}},"url":"http://example.com/2022/05/12/hello-world/","wordCount":0,"image":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"阿珂","url":"http://example.com/","logo":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/imags/diary168.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"阿珂"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/05/19/ansible-note-03/","name":"ansible-note-03"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"ansible-note-03","description":"","datePublished":"2022-05-19T13:53:10.000Z","dateModified":"2022-05-19T16:08:40.213Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/05/19/ansible-note-03/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/imags/diary168.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"阿珂","logo":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}},"url":"http://example.com/2022/05/19/ansible-note-03/","wordCount":0,"keywords":"Ansible","image":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}}]</script>
 
 
 
