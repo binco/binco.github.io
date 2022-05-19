@@ -39,11 +39,11 @@
 <meta property="og:title" content="ansible-note-03">
 <meta property="og:url" content="http://example.com/2022/05/19/ansible-note-03/index.html">
 <meta property="og:site_name" content="阿珂">
-<meta property="og:description" content="理解 Playbook如果说 adhoc 运行一个 task 任务，那么 Playbook 则可以运行多个 task任务。 Playbook 可以包含多个 play 项目，每个 play 项目可以有多个 task 任务。 可以把 Playbook 当成一个精心准备的剧本，每个 play 就是一个个剧集，每个 task 就是一个个情节。 Playbook 格式Playbook 是以 YAML 格式编">
+<meta property="og:description" content="1、理解 Playbook如果说 adhoc 运行一个 task 任务，那么 Playbook 则可以运行多个 task任务。 Playbook 可以包含多个 play 项目，每个 play 项目可以有多个 task 任务。 可以把 Playbook 当成一个精心准备的剧本，每个 play 就是一个个剧集，每个 task 就是一个个情节。 2、Playbook 格式Playbook 是以 YAML">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-05-19T13:53:10.000Z">
-<meta property="article:modified_time" content="2022-05-19T16:08:40.213Z">
+<meta property="article:modified_time" content="2022-05-19T16:15:09.783Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Ansible">
 <meta name="twitter:card" content="summary">
@@ -1913,7 +1913,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.3690b000.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.1d2dd3e0.js","rightMenus":"/js/plugins/rightMenus.3669cc79.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.06d40311.js"},"css":{"style":"/css/style.a03aff9c.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1652976578946),
+    lastupdate: new Date(1652976919947),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2739,10 +2739,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h3 id="理解-Playbook"><a href="#理解-Playbook" class="headerlink" title="理解 Playbook"></a>理解 Playbook</h3><p>如果说 adhoc 运行一个 task 任务，那么 Playbook 则可以运行多个 task任务。</p>
+    <h3 id="1、理解-Playbook"><a href="#1、理解-Playbook" class="headerlink" title="1、理解 Playbook"></a>1、理解 Playbook</h3><p>如果说 adhoc 运行一个 task 任务，那么 Playbook 则可以运行多个 task任务。</p>
 <p>Playbook 可以包含多个 play 项目，每个 play 项目可以有多个 task 任务。</p>
 <p>可以把 Playbook 当成一个精心准备的剧本，每个 play 就是一个个剧集，每个 task 就是一个个情节。</p>
-<h3 id="Playbook-格式"><a href="#Playbook-格式" class="headerlink" title="Playbook 格式"></a>Playbook 格式</h3><p>Playbook 是以 YAML 格式编写的文本文件，通常使用扩展名 yml 保存，Playbook 使用空格字符缩进来表示其数据结构。YAML 对于缩进的空格数量没有严格的要求，但有两个基本的规则：</p>
+<h3 id="2、Playbook-格式"><a href="#2、Playbook-格式" class="headerlink" title="2、Playbook 格式"></a>2、Playbook 格式</h3><p>Playbook 是以 YAML 格式编写的文本文件，通常使用扩展名 yml 保存，Playbook 使用空格字符缩进来表示其数据结构。YAML 对于缩进的空格数量没有严格的要求，但有两个基本的规则：</p>
 <blockquote>
 <ul>
 <li>处于层次结构中同一级别的数据元素（例如同一列表中的项目）必须具有相同的缩进量。</li>
@@ -2756,11 +2756,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>简单示例写法：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">---</span>   <span class="comment">#文档开始标记</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">ababab</span>  <span class="comment"># 一个 play 项目 A，可选，但最好有，用于命名 play，帮助记录用途</span></span><br><span class="line">  <span class="attr">hosts:</span> <span class="string">servera.lab.example.com</span>   <span class="comment"># 指定 play 项目中运行的主机或主机组，对应 inventory</span></span><br><span class="line">  <span class="attr">tasks:</span>            <span class="comment"># 指定 play 项目运行的任务模块</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">newbie</span>  <span class="comment"># 可选，但最好有，用于命名 task，帮助记录用途</span></span><br><span class="line">      <span class="attr">user:</span>         <span class="comment"># 一个 task 任务模块，通常包含参数子项 </span></span><br><span class="line">      <span class="attr">uid:</span> <span class="number">4000</span></span><br><span class="line">      <span class="attr">state:</span> <span class="string">present</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>playbook中的play和task列出的顺序很重要，因为ansible会按照顺序运行它。</p>
-<h3 id="运行-Playbook"><a href="#运行-Playbook" class="headerlink" title="运行 Playbook"></a>运行 Playbook</h3><p><code>ansible-playbook</code> 命令</p>
+<p>Playbook 中的 play 和 task 列出的顺序很重要，因为 Ansible 会按照顺序运行它。</p>
+<h3 id="3、运行-Playbook"><a href="#3、运行-Playbook" class="headerlink" title="3、运行 Playbook"></a>3、运行 Playbook</h3><p><code>ansible-playbook</code> 命令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ansible-playbook --syntax-check test.yml <span class="comment">#验证 playbook 语法</span></span><br><span class="line">ansible-playbook test.yml  <span class="comment">#运行 playbook</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="执行空运行"><a href="#执行空运行" class="headerlink" title="执行空运行"></a>执行空运行</h3><p>使用 <code>-C</code> 参数</p>
+<h3 id="4、执行空运行"><a href="#4、执行空运行" class="headerlink" title="4、执行空运行"></a>4、执行空运行</h3><p>使用 <code>-C</code> 参数</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible-playbook -C test.yml  <span class="comment">#空运行，仅报告直接结果，不会产生实际更改</span></span><br></pre></td></tr></table></figure>
 
 
@@ -2784,7 +2784,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-20T00:08:40+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-20T00:15:09+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年5月20日</p>
@@ -2910,7 +2910,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%90%86%E8%A7%A3-Playbook"><span class="toc-text">理解 Playbook</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Playbook-%E6%A0%BC%E5%BC%8F"><span class="toc-text">Playbook 格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C-Playbook"><span class="toc-text">运行 Playbook</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E7%A9%BA%E8%BF%90%E8%A1%8C"><span class="toc-text">执行空运行</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E7%90%86%E8%A7%A3-Playbook"><span class="toc-text">1、理解 Playbook</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81Playbook-%E6%A0%BC%E5%BC%8F"><span class="toc-text">2、Playbook 格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E8%BF%90%E8%A1%8C-Playbook"><span class="toc-text">3、运行 Playbook</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E6%89%A7%E8%A1%8C%E7%A9%BA%E8%BF%90%E8%A1%8C"><span class="toc-text">4、执行空运行</span></a></li></ol>
     </div>
   </section>
 
@@ -4043,7 +4043,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"阿珂","url":"http://example.com/","logo":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/imags/diary168.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"阿珂"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/05/19/ansible-note-03/","name":"ansible-note-03"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"ansible-note-03","description":"","datePublished":"2022-05-19T13:53:10.000Z","dateModified":"2022-05-19T16:08:40.213Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/05/19/ansible-note-03/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/imags/diary168.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"阿珂","logo":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}},"url":"http://example.com/2022/05/19/ansible-note-03/","wordCount":0,"keywords":"Ansible","image":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"阿珂","url":"http://example.com/","logo":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/imags/diary168.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"阿珂"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/05/19/ansible-note-03/","name":"ansible-note-03"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"ansible-note-03","description":"","datePublished":"2022-05-19T13:53:10.000Z","dateModified":"2022-05-19T16:15:09.783Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/05/19/ansible-note-03/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"/imags/diary168.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"阿珂","logo":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}},"url":"http://example.com/2022/05/19/ansible-note-03/","wordCount":0,"keywords":"Ansible","image":{"@type":"ImageObject","url":"/imags/diary168.png","width":192,"height":192}}]</script>
 
 
 
