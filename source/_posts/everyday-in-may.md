@@ -25,5 +25,5 @@ tags: 打卡
 - {% checkbox green checked:: 5-16 🍅 vim grep %}
 - {% checkbox green checked:: 5-17 🍅 🍅 git add branch %}
 - {% checkbox green :: 5-18 %}
-- {% checkbox green :: 5-19 %}
+- {% checkbox green checked:: 5-19 🍅 🍅🍅 🍅 理解ansible playbook %}
 
