@@ -30,7 +30,7 @@ tags: vim
 
 ### Windows
 
-窗口、视图，及我们看到的 vim 界面。
+窗口、视图，即我们看到的 vim 界面。
 
 在 vim 编辑界面，使用 `:split filename`  或者  `:vsplit filename` 、`:new filename` 可以在当前页面分割窗口，同时显示多个 buffer。这个最终的显示效果跟同时打开多个窗口是一样的。
 
@@ -39,7 +39,7 @@ vim -o2 txt1 txt2 #水平分割
 vim -O3 txt1 txt2 txt3 #垂直分割
 ```
 
-在分割的窗口之间切换编辑，可以使用 `Ctrl-W`  前缀键，再按 `hjkl` 切换左上下右。
+在分割的窗口之间切换编辑，可以使用 `Ctrl-W`  前缀键，再按 `hjkl` 切换左下上右。
 
 在 vim 编辑界面，也可以直接创建新窗口：
 
